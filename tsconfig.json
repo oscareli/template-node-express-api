@@ -36,6 +36,9 @@
   },
   "include": ["**/*"],
   "exclude": [
-      "node_modules"
+      "node_modules",
+      "babel.config.js",
+      "jest.config.ts",
+      "test/*"
   ]
 }
