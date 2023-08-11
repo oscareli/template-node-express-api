@@ -10,5 +10,6 @@
     },
     "parserOptions": {
       "project": "./tsconfig.eslint.json"
-    }
+    },
+    "ignorePatterns": ["test/**"]
   }
