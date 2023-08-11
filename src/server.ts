@@ -6,12 +6,13 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const app = ExpressConfig();
-const PORT = process.env.PORT;
+const { PORT } = process.env;
 
 app.get('/', (_req, res) => {
   res.send({ msg: 'Hello World!' });
 });
 
-app.listen(PORT, () => console.log('Server Running on Port ' + PORT));
+// eslint-disable-next-line no-console
+app.listen(PORT, () => console.log(`Server Running on Port ${PORT}`));
 
 export default app;
