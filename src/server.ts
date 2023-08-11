@@ -8,7 +8,7 @@ if (process.env.NODE_ENV !== "production") {
 const app = ExpressConfig()
 const PORT = process.env.PORT;
 
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
     res.send({ msg: 'Hello World!' });
   });
 
