@@ -1,18 +1,17 @@
-import dotenv from "dotenv";
-import ExpressConfig from "./Express/express.config"
+import dotenv from 'dotenv';
+import ExpressConfig from './Express/express.config';
 
-if (process.env.NODE_ENV !== "production") {
-    dotenv.config();
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config();
 }
 
-const app = ExpressConfig()
+const app = ExpressConfig();
 const PORT = process.env.PORT;
 
 app.get('/', (_req, res) => {
-    res.send({ msg: 'Hello World!' });
-  });
+  res.send({ msg: 'Hello World!' });
+});
 
-app.listen(PORT, () => console.log("Server Running on Port " + PORT));
-
+app.listen(PORT, () => console.log('Server Running on Port ' + PORT));
 
 export default app;
